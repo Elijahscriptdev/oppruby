@@ -1,12 +1,6 @@
 #!/usr/bin/env ruby
 class Tic
-  # attr_reader :board
-  #
-  # def initialize
-  #   @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-  #   @total_moves = 9
-  # end
-
+ 
   def welcome
     puts ' '
     puts '******************************'
@@ -52,15 +46,8 @@ class Tic
     position = gets.chomp
   end
 
-  # def get_current_player
-  #   if @total_moves%2 == 0
-  #     @current_player = player_two
-  #   else
-  #     @current_player = player_one
-  #   end
-  # end
-
 end
+
 game = Tic.new
 game.welcome
 game.display_board

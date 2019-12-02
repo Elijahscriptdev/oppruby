@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Tic
-
   def initialize
     @board = Board.new
     @player = Player.new
@@ -39,19 +38,19 @@ class Tic
       @player.num_choice(@board.game_board)
       @board.add_to_board(
         @player.choice,
-        @player.player,
+        @player.player
       )
       puts @board.display_board
       @board.count_board(@player.player)
       if game_winner?
-        puts "GAME OVER!"
+        puts 'GAME OVER!'
         puts "Winner player #{@player.player}!"
         break
       end
       $count += 1
     end
-    if game_draw?
-      puts "It is a draw...try again!!!"
+    unless game_draw?
+      puts 'It is a draw...try again!!!'
     end
   end
 end

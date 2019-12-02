@@ -4,6 +4,7 @@ class Tic
   def initialize
     @board = Board.new
     @player = Player.new
+    @count = 0
   end
 
   def intro
@@ -23,7 +24,7 @@ class Tic
   end
 
   def game_draw?
-    $count >= 9
+    @count >= 9
   end
 
   def game_winner?
@@ -32,7 +33,7 @@ class Tic
 
   def run
     intro
-    while $count < 9
+    while @count < 9
       @player.switch
       puts "Player #{@player.player}, pick a number between 1-9:"
       @player.num_choice(@board.game_board)
@@ -47,7 +48,7 @@ class Tic
         puts "Winner player #{@player.player}!"
         break
       end
-      $count += 1
+      @count += 1
     end
     if game_draw?
       puts 'It is a draw...try again!!!'

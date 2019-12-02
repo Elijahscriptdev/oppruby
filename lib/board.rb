@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 class Board
   attr_accessor :game_board, :board_num
   def initialize
-    @game_board = [" "," "," "," "," "," "," "," "," "]
+    @game_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     @board_num = []
   end
 

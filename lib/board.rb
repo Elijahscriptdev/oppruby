@@ -8,8 +8,9 @@ class Board
   end
 
   def display_board
-    disp = " #{@game_board[0]} | #{@game_board[1]} | #{@game_board[2]}\n " + "---------\n" + " #{@game_board[3]} | #{@game_board[4]} | #{@game_board[5]}\n " + "---------\n" + 
-    " #{@game_board[6]} | #{@game_board[7]} | #{@game_board[8]} "
+    disp = " #{@game_board[0]} | #{@game_board[1]} | #{@game_board[2]}\n " + 
+    "---------\n" + " #{@game_board[3]} | #{@game_board[4]} | #{@game_board[5]}\n " + 
+    "---------\n" + " #{@game_board[6]} | #{@game_board[7]} | #{@game_board[8]} "
     disp
   end
 

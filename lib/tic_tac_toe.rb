@@ -49,7 +49,7 @@ class Tic
       end
       $count += 1
     end
-    unless game_draw?
+    if game_draw?
       puts 'It is a draw...try again!!!'
     end
   end

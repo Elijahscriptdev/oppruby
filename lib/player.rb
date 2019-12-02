@@ -22,6 +22,6 @@ class Player
       puts 'Please input another number between 1-9 and not used already'
       @choice = gets.to_i
     end
-    return @choice
+    @choice
   end
 end

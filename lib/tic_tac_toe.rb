@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Tic
 
   def initialize
@@ -33,7 +35,7 @@ class Tic
     intro
     while $count < 9
       @player.switch
-      puts "Player #{@player.player}, pick a number between 1-9:"
+      puts 'Player #{@player.player}, pick a number between 1-9:'
       @player.num_choice(@board.game_board)
       @board.add_to_board(
         @player.choice,
@@ -42,14 +44,14 @@ class Tic
       puts @board.display_board
       @board.count_board(@player.player)
       if game_winner?
-        puts "GAME OVER!"
-        puts "Winner player #{@player.player}!"
+        puts 'GAME OVER!'
+        puts 'Winner player #{@player.player}!'
         break
       end
       $count += 1
     end
     if game_draw?
-      puts "It is a draw...try again!!!"
+      puts 'It is a draw...try again!!!'
     end
   end
 end

@@ -1,16 +1,19 @@
 # frozen_string_literal: true
 
 class Player
-  attr_accessor :choice, :player
+  attr_accessor :choice, :player, :count
   def initialize
     @choice = nil
     @player = 'X'
+    @count = 0
   end
 
   def switch
-    if ($count % 2).zero?
+    @count += 1
+    if (@count % 2).zero?
       @player = 'X'
     else
+      @count = 1
       @player = 'O'
     end
   end

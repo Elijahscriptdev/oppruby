@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Tic
-  
   def initialize
     @board = Board.new
     @player = Player.new

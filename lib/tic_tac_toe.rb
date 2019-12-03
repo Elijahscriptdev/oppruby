@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Tic
-
   def initialize
     @board = Board.new
     @player = Player.new
@@ -51,6 +50,7 @@ class Tic
       $count += 1
     end
     return unless game_draw?
-      puts 'It is a draw...try again!!!'
+
+    puts 'It is a draw...try again!!!'
   end
 end

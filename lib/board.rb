@@ -8,7 +8,7 @@ class Board
   end
 
   def display_board
-    bord_v =  " #{@game_board[0]} | #{@game_board[1]} | #{@game_board[2]}\n " \
+    bord_v = " #{@game_board[0]} | #{@game_board[1]} | #{@game_board[2]}\n " \
             "---------\n" \
             " #{@game_board[3]} | #{@game_board[4]} | #{@game_board[5]}\n " \
             "---------\n" \

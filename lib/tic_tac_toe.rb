@@ -28,30 +28,29 @@ class Tic
   end
 
   def game_winner?
-    @board.has_winner
+    @board.winner?
   end
 
   def run
     intro
     while $count < 9
       @player.switch
-      puts 'Player #{@player.player}, pick a number between 1-9:'
+      puts "Player #{@player.player}, pick a number between 1-9:"
       @player.num_choice(@board.game_board)
       @board.add_to_board(
         @player.choice,
-        @player.player,
+        @player.player
       )
       puts @board.display_board
       @board.count_board(@player.player)
       if game_winner?
         puts 'GAME OVER!'
-        puts 'Winner player #{@player.player}!'
+        puts "Winner player #{@player.player}!"
         break
       end
       $count += 1
     end
-    if game_draw?
+    return unless game_draw?
       puts 'It is a draw...try again!!!'
-    end
   end
 end

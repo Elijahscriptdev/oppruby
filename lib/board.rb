@@ -24,12 +24,12 @@ class Board
     @board_num = []
     9.times do |i|
     if @game_board[i] == player
-      return board_num 
       @board_num << i
     else
       @board_num << nil
     end
     end
+    return board_num
   end
 
   def winner?

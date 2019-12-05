@@ -1,35 +1,36 @@
-![Issues][issues-shield]
+## Tic-Tac-Toe
+
+## Rules
+
+- Play occurs on a 3 by 3 grid of 9 squares.
+
+- Two players takes turns only in the empty squares, the first making x's, the second o's.
+
+- A row is any three squares on the grid, adjacent, diagonally, vertically, or horizontally.
+
+- If one player places three of the same marks in a row, the player WINS!
+
+- If the spaces are all filled and there is no winner, the game ends in a draw.
+
+## Instructions
+
+To start the game, in a terminal navigate to the root directory and type:
+
+`ruby bin/main.rb`
+
+or if using Windows you can simply run
+
+`main.exe`
+
+This is the starting screen of the game, here we have the header which includes the instructions for playing the game.
+
+The first player who is player_one is asked to enter their name and is assigned to use letter `O` in the game while the second player who is player_two is assigned the letter 'O' once they have entered their names. 
 
 
-  <h3 align="center">OOP (Object Oriented Programming)</h3>
+On the main game state we have a numbered board, from 1 to 9 and a message prompting for user input. Player 'O' starts typing a number from 1 to 9 and pressing enter. Player 'X' will then be prompted for a number from 1 to 9. 
 
-  <p align="center">
-   In this project, the student builds a Tic Tac Toe game. The main goal is to put into practice the main concepts of Object Oriented Programming. Particularly, classes and access to their attributes.</p>
-    <br />
-    <a href="https://github.com/EdSacasa/"><strong>Explore the docs »</strong></a>
-    <br />
-    ·
-    <a href="https://github.com/EdSacasa/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/EdSacasa/issues">Request Feature</a>
-  </p>
-</p>
-
-
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Contributing](#contributing)
-* [Contact](#contact)
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-Milestone 1: Project setup
+If a player inputs an invalid number, he'll receive a warning and will be prompted for input again, until a valid value is provided. Game goes on until a player wins or ties. 
+The game displays the winner.
 
 ### Built With
 
@@ -55,25 +56,6 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Ed Sacasa - (https://github.com/EdSacasa) </br>
 Elijah - (https://github.com/Elijahscriptdev)
 
-Project Link: [https://github.com/EdSacasa/enummerable](https://github.com/EdSacasa/enummerable)
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[product-screenshot]: images/screenshot.png
+Project Link: [https://github.com/Elijahscriptdev/oppruby](https://github.com/Elijahscriptdev/oppruby)

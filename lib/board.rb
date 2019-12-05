@@ -33,15 +33,15 @@ class Board
   def count_board(player)
     @board_num = []
     9.times do |i|
-        if @game_board[i] == player
-            @board_num << i
-        else
-            @board_num << nil
-        end
+      if @game_board[i] == player
+        @board_num << i
+      else
+        @board_num << nil
+      end
     end
   end
 
   def winner?
-    WIN.any? {|line| (line - @board_num) == [] }
+    WIN.any? { |line| (line - @board_num) == [] }
   end
 end

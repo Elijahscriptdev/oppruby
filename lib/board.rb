@@ -20,21 +20,11 @@ class Board
     @game_board[choice - 1] = player
   end
 
-#   def count_board(player)
-#     @board_num = []
-#     9.times do |i|
-#       return @board_num << i if @game_board[i] == player
-
-#       @board_num << nil
-#     end
-#     board_num
-#   end
-
   def count_board(player)
     @board_num = []
     9.times do |i|
       @board_num << i if @game_board[i] == player
-        @board_num << nil
+      @board_num << nil
     end
   end
 

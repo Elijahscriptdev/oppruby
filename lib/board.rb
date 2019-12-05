@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Board
-  attr_accessor :game_board, :board_num
+  attr_reader :game_board, :board_num
   def initialize
     @game_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     @board_num = []
@@ -20,17 +20,28 @@ class Board
     @game_board[choice - 1] = player
   end
 
+#   def count_board(player)
+#     @board_num = []
+#     9.times do |i|
+#       return @board_num << i if @game_board[i] == player
+
+#       @board_num << nil
+#     end
+#     board_num
+#   end
+
   def count_board(player)
     @board_num = []
     9.times do |i|
-      return @board_num << i if @game_board[i] == player
-
-      @board_num << nil
+        if @game_board[i] == player
+            @board_num << i
+        else
+            @board_num << nil
+        end
     end
-    board_num
   end
 
   def winner?
-    WIN.any? { |line| (line - @board_num) == [] }
+    WIN.any? {|line| (line - @board_num) == [] }
   end
 end

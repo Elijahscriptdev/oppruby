@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Player
-  attr_accessor :choice, :player, :count
+  attr_reader :choice, :player, :count
   def initialize
     @choice = nil
     @player = 'X'

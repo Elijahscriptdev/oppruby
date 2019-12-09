@@ -75,14 +75,6 @@ describe Player do
   end
 
   describe '#switch' do
-    # context 'when count is even' do
-    #   it 'returns "X" as the player' do
-
-    #     player.switch
-    #     expect(player.player).to eq('X')
-    #   end
-    # end
-
     context 'when count is odd' do
       it 'returns "O" as the player' do
         player.switch

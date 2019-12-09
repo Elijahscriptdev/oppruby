@@ -51,7 +51,7 @@ describe Board do
 
     context 'when not win condition' do
       it 'returns false after confirming no win condition' do
-        board_num = [nil , 1, nil, 3, nil, nil, 6, nil, 8, 9]
+        board_num = [nil, 1, nil, 3, nil, nil, 6, nil, 8, 9]
         win = WIN.any? { |line| (line - board_num) == [] }
         expect(win).to eq(false)
       end
@@ -60,10 +60,9 @@ describe Board do
 end
 
 describe Player do
-
   let!(:player) { Player.new }
-  let(:game_board_empty) {[" "," "," "," "," "," "," "," "," "," "]}
-  let(:game_board_full) {["0","1","2","3"," ","5","6","7","8","9"]}
+  let(:game_board_empty) { [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] }
+  let(:game_board_full) { ['0', '1', '2', '3', ' ', '5', '6', '7', '8', '9'] }
 
   describe '#initialize' do
     context 'on game start-up' do
@@ -86,15 +85,15 @@ describe Player do
   describe '#num_choice' do
     context 'when choice is valid' do
       it 'sets and returns player choice' do
-        allow(player).to receive(:gets).and_return("1".to_i)
+        allow(player).to receive(:gets).and_return('1'.to_i)
         player.num_choice(game_board_empty)
         expect(player.choice).to eq(1)
       end
     end
 
     context 'when choice is invalid' do
-      it "asks for choice until vaild, should return error message twice in terminal" do
-        allow(player).to receive(:gets).at_most(2).and_return("e","0".to_i,"5".to_i)
+      it 'asks for choice until vaild, should return error message twice in terminal' do
+        allow(player).to receive(:gets).at_most(2).and_return('e', '0'.to_i, '5'.to_i)
         player.num_choice(game_board_full)
         expect(player.choice).to eq(5)
       end

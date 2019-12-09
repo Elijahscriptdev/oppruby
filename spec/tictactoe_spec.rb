@@ -5,16 +5,16 @@ require 'rspec'
 
 WIN = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
        [0, 3, 6], [1, 4, 7], [2, 5, 8],
-	   [0, 4, 8], [2, 4, 6]]
+       [0, 4, 8], [2, 4, 6]].freeze
 
 describe Board do
-  let(:board) {Board.new} 
+  let(:board) { Board.new }
   let(:board_num) {}
 
   describe '#initialize' do
-    it "checks if board is created" do
-	  expect(board.game_board).to match_array([" ", " ", " ", " ", " ", " ", " ", " ", " "])
-   end
+    it 'checks if board is created' do
+	  expect(board.game_board).to match_array([' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '])
+    end
   end
 
   context 'when initialized helper array' do
@@ -22,32 +22,32 @@ describe Board do
 	  expect(board.board_num).to match_array([])
 	end
   end
-    
+
   describe '#add_to_board' do
-	it 'adds "X" or "O" to game board' do
+    it 'adds "X" or "O" to game board' do
 	  board.add_to_board(0, 'O')
-	  expect(board.game_board).to contain_exactly("O", " ", " ", " ", " ", " ", " ", " ", " ")
-	end
-  end
-    
-  describe '#count_board' do
-	it 'returns array that contains either a number or nil as an element' do
-	  board.game_board
-	  board.count_board('O')
-      expect(board.board_num).to match_array([nil, nil, nil, nil, nil, nil, nil, nil, nil])
-	end
-  end
-    
-  describe '#winner?' do
-	context 'when win condition' do
-	  it 'returns true after confiriming win condition' do
-		board_num = [0, 1, 2, nil, nil, nil, nil, nil, nil]
-		win = WIN.any? { |line| (line - board_num) == []}
-		expect(win).to eq(true)
-	  end
+	  expect(board.game_board).to contain_exactly('O', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ')
     end
-        
-    context 'when not win condition' do
+  end
+
+  describe '#count_board' do
+    it 'returns array that contains either a number or nil as an element' do
+      board.game_board
+      board.count_board('O')
+      expect(board.board_num).to match_array([nil, nil, nil, nil, nil, nil, nil, nil, nil])
+    end
+  end
+
+  describe '#winner?' do
+    context 'when win condition' do
+      it 'returns true after confiriming win condition' do
+        board_num = [0, 1, 2, nil, nil, nil, nil, nil, nil]
+		win = WIN.any? { |line| (line - board_num) == [] }
+        expect(win).to eq(true)
+      end
+    end
+
+   context 'when not win condition' do
 	  it 'returns false after confirming no win condition' do
 		board_num = [nil , 1, nil, 3, nil, nil, 6, nil, 8, 9]
 		win = WIN.any? { |line| (line - board_num) == []}
